@@ -12,3 +12,5 @@ for i in sys.argv:
 print("\n\n系统路径为：", sys.path,'\n')
 
 Support.printFunc("zhangsan")
+
+print(dir())
