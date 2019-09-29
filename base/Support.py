@@ -1,3 +1,3 @@
 
-def printFunc(name):
+def print_func(name):
     print("hello!, ", name)

@@ -11,6 +11,6 @@ for i in sys.argv:
 # sys.path 包含了一个 Python 解释器自动查找所需模块的路径的列表。
 print("\n\n系统路径为：", sys.path,'\n')
 
-Support.printFunc("zhangsan")
+Support.print_func("zhangsan")
 
 print(dir())
