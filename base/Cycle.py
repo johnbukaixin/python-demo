@@ -63,6 +63,7 @@ for n in range(2, 10):
         # 循环中没有找到元素
         print(n, ' 是质数')
 
+# pass 为了保持程序的完整性
 letter = 'Runoob'
 for str in letter:
   if str == 'o':
