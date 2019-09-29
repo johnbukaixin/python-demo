@@ -2,8 +2,7 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 
-
-def write_image_bubble(img):
-    image = Image.open("d:\\work\\python_pri\\weiimage.jpg")
-    draw = ImageDraw.Draw(image)
-    draw.text((100, 6), '4', fill=(255, 0, 0), font=ImageFont.LAYOUT_RAQM)
+image = Image.open("d:\\work\\python-pri\\weiimage.jpg")
+draw = ImageDraw.Draw(image)
+draw.text((100, 6), '4', fill=(255, 0, 0), font=ImageFont.truetype())
+image.show()
