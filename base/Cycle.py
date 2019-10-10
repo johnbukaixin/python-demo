@@ -57,7 +57,7 @@ print(b)
 for n in range(2, 10):
     for x in range(2, n):
         if n % x == 0:
-            print(n, '等于', x, '*', n//x)
+            print(n, '等于', x, '*', n // x)
             break
     else:
         # 循环中没有找到元素
@@ -66,12 +66,46 @@ for n in range(2, 10):
 # pass 为了保持程序的完整性
 letter = 'Runoob'
 for str in letter:
-  if str == 'o':
-      pass
-      print("执行pass代码块")
-  print(str)
+    if str == 'o':
+        pass
+        print("执行pass代码块")
+    print(str)
 print("good bye")
 
 if None:
     print("Hello")
 
+sum = 0
+x = 1
+n = 1
+while True:
+    sum += (x + 2 * x)
+    n = n + 1
+    if n > 20:
+        break
+print(sum)
+
+sum = 0
+x = 1
+while True:
+    x = x + 1
+    if x > 100:
+        break
+    if x % 2 == 0:
+        continue
+    sum = sum + x
+print(sum)
+
+for x in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+    for y in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+        if x < y:
+            print(x + y)
+
+d = {
+    'Adam': 95,
+    'Lisa': 85,
+    'Bart': 59
+}
+
+for key in d:
+    print(key, ': ', d[key])

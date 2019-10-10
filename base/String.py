@@ -9,6 +9,26 @@ sub = 'haha'
 count = sub.count("a", 0, 4)
 print(count)
 
+test = r'''
+  '\"To be, or not to be\": that is the question.\nWhether it\'s nobler in the mind to suffer.'
+'''
+
+test1 = '''
+  \"To be, or not to be\": that is the question.\nWhether it\'s nobler in the mind to suffer.
+'''
+
+print('''
+  静夜思
+
+床前明月光，
+疑是地上霜。
+举头望明月，
+低头思故乡。 
+''')
+
+
+print(test)
+print(test1)
 str = "菜鸟教程"
 str_utf8 = str.encode("UTF-8")
 str_gbk = str.encode("GBK")
