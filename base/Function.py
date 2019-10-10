@@ -106,7 +106,6 @@ sum = lambda arg1, arg2: arg1 + arg2
 
 print(sum(2, 4))
 
-
 # 变量作用域
 # Python的作用域一共有4种，分别是：
 #
@@ -118,11 +117,15 @@ print(sum(2, 4))
 # >>> import builtins
 # >>> dir(builtins)
 
-gCount = 0 # 全局作用域
+gCount = 0  # 全局作用域
+
+
 def outer():
-    oCount = 1 # 闭包函数外作用
+    oCount = 1  # 闭包函数外作用
+
     def inner():
-        iCount = 2 # 局部作用域
+        iCount = 2  # 局部作用域
+
 
 # 模块（module），类（class）以及函数（def、lambda）才会引入新的作用域，
 # 其它的代码块（如 if/elif/else/、try/except、for/while等）是不会引入新的作用域的，也就是说这些语句内定义的变量，外部也可以访问
@@ -146,5 +149,27 @@ def outer():
 # >>>
 
 numbers = [1, 3, 6]
-newNumbers = tuple(map(lambda x: x , numbers))
+newNumbers = tuple(map(lambda x: x, numbers))
 print(newNumbers)
+
+
+def printa(s1, s2):
+    return s1, s2
+
+
+r = printa("a", "v")
+
+print(r)
+
+import math
+
+
+def quadratic_equation(a, b, c):
+    t = math.sqrt((b * b - 4 * a * c))
+    x1 = (-b + t) / (2 * a)
+    x2 = (-b - t) / (2 * a)
+    return x1, x2
+
+
+print(quadratic_equation(2, 3, 0))
+print(quadratic_equation(1, -6, 5))
