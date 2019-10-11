@@ -22,3 +22,6 @@ tupqq = tup1[0]
 
 print(tupqq)
 
+
+L1 = range(1,100,2)
+L2 = range(2,100,2)

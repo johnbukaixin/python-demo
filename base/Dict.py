@@ -70,3 +70,12 @@ dict1.update(newDict)
 print(dict1)
 # 张三 删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。
 print(dict1.pop("s"))
+
+
+d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59, 'Paul': 74 }
+
+sum = 0.0
+for k, v in d.items():
+    sum = sum + v
+    print (k,':',v)
+print ('average', ':', sum / len(d.items()))

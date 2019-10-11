@@ -81,3 +81,5 @@ score = [1,2,3,4]
 com = zip(score,L)
 for index, name in com:
     print (index, '-', name)
+
+print ([x * 100 + y * 10 + z for x in range(1,10) for y in range(10) for z in range(10) if x == z])

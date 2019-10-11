@@ -18,7 +18,7 @@ print(a & b)
 print(a ^ b)
 
 dict = {'one': 1, 2: 2}
-tinyDict = {'name': 'runoob','code':1, 'site': 'www.runoob.com'}
+tinyDict = {'name': 'runoob', 'code': 1, 'site': 'www.runoob.com'}
 dict.copy()
 print(dict)
 print(dict['one'])
@@ -93,3 +93,22 @@ oct(x)
 将一个整数转换为一个八进制字符串
 """
 
+L1 = range(1, 100, 2)
+L2 = range(2, 100, 2)
+
+print([x * y for x, y in zip(L1, L2)])
+
+
+d = {'Adam': 95, 'Lisa': 85, 'Bart': 59}
+def generate_tr(name, score):
+    if score < 60:
+        return '<tr><td>%s</td><td style="color:red">%s</td></tr>' % (name, score)
+    else:
+        return '<tr><td>%s</td><td>%s</td></tr>' % (name, score)
+
+
+tds = [generate_tr(name, score) for name, score in d.items()]
+print('<table border="1">')
+print('<tr><th>Name</th><th>Score</th><tr>')
+print('\n'.join(tds))
+print('</table>')
