@@ -173,3 +173,15 @@ def quadratic_equation(a, b, c):
 
 print(quadratic_equation(2, 3, 0))
 print(quadratic_equation(1, -6, 5))
+
+
+def average(*args):
+    avg = 0
+    sum = 0
+    for num in args:
+       sum = sum + num
+       avg = sum / len(args)
+    return avg
+print(average())
+print(average(1, 2))
+print(average(1, 2, 2, 3, 4))

@@ -1,6 +1,8 @@
 tup1 = ("d", "f", "e")
 tup2 = (1, 2, "w")
 tup3 = "1", "2", "3"
+
+print(len(tup3))
 print(type(tup3))
 # 空元组
 tup4 = ()
