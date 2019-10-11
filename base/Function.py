@@ -179,9 +179,23 @@ def average(*args):
     avg = 0
     sum = 0
     for num in args:
-       sum = sum + num
-       avg = sum / len(args)
+        sum = sum + num
+        avg = sum / len(args)
     return avg
+
+
 print(average())
 print(average(1, 2))
 print(average(1, 2, 2, 3, 4))
+
+
+def firstCharUpper(s):
+    return s[:1].upper() + s[1:]
+
+
+print(firstCharUpper('hello'))
+print(firstCharUpper('sunday'))
+print(firstCharUpper('september'))
+
+
+

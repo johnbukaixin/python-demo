@@ -71,3 +71,13 @@ for x in myIter1:
 
 print(myClass1 is iter(myClass1))
 print(i for i in myClass1)
+
+for i in range(0,101):
+    if i % 7 == 0:
+        print(i)
+
+L = ['Adam', 'Lisa', 'Bart', 'Paul']
+score = [1,2,3,4]
+com = zip(score,L)
+for index, name in com:
+    print (index, '-', name)
