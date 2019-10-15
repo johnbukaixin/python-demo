@@ -209,6 +209,7 @@ def change_sign(v):
         pass
     return new_sign
 
+
 # 处理通过还是不通过
 def deal_fail(func):
     def wrapper():
@@ -222,6 +223,8 @@ def deal_fail(func):
             return change_sign(value)
 
     return wrapper
+
+
 # 选择课程
 def choose_course(func):
     def wrapper():
@@ -238,6 +241,7 @@ def choose_course(func):
         pass
 
     return wrapper
+
 
 # 录入成绩
 @choose_course
@@ -257,6 +261,35 @@ def entry_grade():
 
 
 print(entry_grade())
+
+import time, functools
+
+
+def performance(unit):
+    def performance_dec(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+
+            t1 = time.time()
+            r = func(*args, **kwargs)
+            t2 = time.time()
+            if unit == 'ms':
+                print('call %s() in %fs' % (func.__name__, (t2 - t1) * 1000))
+            else:
+                print('call %s() in %fs' % (func.__name__, (t2 - t1)))
+            return r
+
+        return wrapper
+
+    return performance_dec
+
+
+@performance('ms')
+def factorial(n):
+    return functools.reduce(lambda x, y: x * y, range(1, n + 1))
+
+
+print(factorial.__name__)
 
 
 
