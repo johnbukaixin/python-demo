@@ -1,9 +1,9 @@
 # 迭代
 import sys
 
-list = [1, 2, 3, 4]
+list1 = [1, 2, 3, 4]
 
-it = iter(list)
+it = iter(list1)
 
 print(next(it))
 
@@ -84,3 +84,9 @@ for index, name in com:
 
 # 利用 3 层for循环的列表生成式，找出对称的 3 位数。例如，121 就是对称数，因为从右到左倒过来还是 121。
 print ([x * 100 + y * 10 + z for x in range(1,10) for y in range(10) for z in range(10) if x == z])
+
+lists = []
+dicts = {}
+
+print(isinstance(lists,list))
+print(isinstance(dicts,dict))
