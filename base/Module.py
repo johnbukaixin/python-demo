@@ -15,3 +15,9 @@ print('Python was started in 1989 by "Guido".', '\n', 'Python is free and easy t
 Support.print_func("zhangsan")
 
 print(dir())
+
+import os
+
+print(os.path.isdir(r'C:\Windows'))
+print(os.path.isfile(r'C:\Windows\notepad.exe'))
+
