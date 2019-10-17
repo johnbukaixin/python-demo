@@ -1,4 +1,3 @@
-
 class Person4(object):
     __count = 0
 
