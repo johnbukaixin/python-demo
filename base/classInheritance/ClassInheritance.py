@@ -13,3 +13,4 @@ class Teacher(Person):
 t = Teacher('Alice', 'Female', 'English')
 print(t.name)
 print(t.course)
+
