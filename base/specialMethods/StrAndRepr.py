@@ -76,3 +76,8 @@ print(len(f))
 
 a,b = 1,2
 print(a,b)
+
+ccc = 4
+bbbb = 4
+
+print(ccc / bbbb)
