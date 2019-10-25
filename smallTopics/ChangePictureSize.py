@@ -16,8 +16,9 @@ def change_image_size(image_file_path):
         files = os.listdir(image_file_path)
         for file in files:
             try:
-                if not os.path.isdir(file):
-                    img = Image.open(image_file_path + '\\' + file)
+                path = os.path.join(image_file_path, file)
+                if not os.path.isdir(path):
+                    img = Image.open(path)
                     iphone5_width = 1136
                     iphone5_depth = 640
                     change_size_out((iphone5_width, iphone5_depth), img)

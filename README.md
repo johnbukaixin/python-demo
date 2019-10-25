@@ -22,4 +22,5 @@
 21、装饰器
 22、偏函数
 22、面向对象、类
+23、练习，题目见 https://github.com/Yixiaohan/show-me-the-code
 ```
