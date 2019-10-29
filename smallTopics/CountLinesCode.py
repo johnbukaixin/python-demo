@@ -15,16 +15,21 @@ def read_file(file_path):
         print('文件路径不能为空')
         return
     try:
-        files = os.listdir(file_path)
-        for file in files:
-            path = os.path.join(file_path, file)
-            if os.path.isfile(path):
-                f = open(path, 'r+', encoding="UTF-8")
-                # 读取全部内容
-                codes = f.readlines()
-                print(file,count(codes))
-            else:
-                read_file(path)
+        if not os.path.isfile(file_path):
+            files = os.listdir(file_path)
+            for file in files:
+                path = os.path.join(file_path, file)
+                if os.path.isfile(path):
+                    f = open(path, 'r+', encoding="ISO-8859-1")
+                    # 读取全部内容
+                    codes = f.readlines()
+                    print(file, count(codes))
+                else:
+                    read_file(path)
+        else:
+            f = open(file_path, 'r+', encoding="ISO-8859-1")
+            codes = f.readlines()
+            print(file_path, count(codes))
     except Exception as  error:
         print("出现如下异常%s" % error)
 
@@ -40,6 +45,8 @@ def count(codes):
             if validate_annotation(code):
                 flag = True
                 comment_lines += 1
+            elif code.startswith("#"):
+                comment_lines += 1
             elif validate_blank_line(code):
                 blank_lines += 1
             else:
@@ -50,13 +57,15 @@ def count(codes):
             if code.endswith("'''") or code.endswith('"""'):
                 flag = False
                 comment_lines += 1
+            else:
+                comment_lines += 1
 
     return code_lines, comment_lines, blank_lines
 
 
 def validate_annotation(code):
     if isinstance(code, str):
-        if code.startswith("#") or code == '"""' or code == "'''":
+        if code == '"""' or code == "'''":
             return True
 
     return False
@@ -72,4 +81,3 @@ def validate_blank_line(code):
 
 if __name__ == '__main__':
     read_file("D:\\Users\\panta\\PycharmProjects\\demo\\base")
-
