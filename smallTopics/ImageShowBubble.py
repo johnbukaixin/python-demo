@@ -12,6 +12,7 @@ from PIL import ImageDraw
 def white_to_transparent(img):
     img = img.convert('RGBA')  # 返回一个转换后的图像的副本
     datas = img.getdata()
+    print(list(datas))
     newData = []
     for item in datas:
         if item[0] == 255 and item[1] == 255:
@@ -34,3 +35,5 @@ if __name__ == "__main__":
     draw = ImageDraw.Draw(p1_image)  # 在p1_image上绘制文字，图像
     draw.text((0, 50), '', font=usr_font)  # 在新建的对象 上坐标（50,50）处开始画出红色文本 左上角为画布坐标（0,0）点
     p1_image.save("final.png", "PNG")
+
+

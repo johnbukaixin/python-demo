@@ -4,7 +4,7 @@
 # IDE:PyCharm
 
 # todo: 判断链接
-from smallTopics.FindoutBody import read_dir
+from smallTopics.findBody.FindoutBody import read_dir
 
 
 def validate_href(code):
