@@ -7,6 +7,8 @@
 
 import os
 
+from smallTopics.ReadFileUtil import read_file
+
 
 def read_dir(file_path):
     """
@@ -30,22 +32,6 @@ def read_dir(file_path):
         print("出现如下异常%s" % error)
 
 
-def read_file(file_path, file=None):
-    if file is None or file == '':
-        path = file_path
-    else:
-        path = os.path.join(file_path, file)
-
-    if os.path.isfile(path):
-        f = open(path, 'r+', encoding="UTF-8")
-        # 读取全部内容
-        codes = f.readlines()
-        return codes
-    else:
-        read_file(file_path, file)
-
-
-L = []
 
 
 def find_body(codes, flag):
