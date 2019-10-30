@@ -10,8 +10,7 @@ User_Agent = 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefo
 header = {}
 header['User-Agent'] = User_Agent
 
-def find_href():
-    url = "https://www.mytijian.com"
+def find_href(url):
     req = urllib.request.Request(url, headers=header)
     page = urllib.request.urlopen(req)
 
@@ -23,6 +22,8 @@ def find_href():
 
 
 if __name__ == '__main__':
-    for i in range(100000):
-        find_href()
+    url = "https://www.mytijian.com"
+
+    for i in range(10):
+        find_href(url)
         time.sleep(1)
