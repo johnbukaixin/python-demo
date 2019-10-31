@@ -8,6 +8,15 @@ from bs4 import BeautifulSoup
 
 
 def download_image(url, parser, tag, src, pageNum):
+    """
+    :param url: 访问路径 https://www.fabiaoqing.com/bqb/lists/type/hot/page/
+    :param parser: 解析器
+    :param tag: 访问tag
+    :param src: 获取资源的属性名称
+    :param pageNum: 网页的总页数
+    :return:
+    """
+
     imgID = 0
     for page in range(1, pageNum):
         new_url = url + str(page) + '.html'
