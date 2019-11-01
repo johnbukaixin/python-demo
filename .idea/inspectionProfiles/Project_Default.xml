@@ -14,6 +14,7 @@
         <list>
           <option value="urllib.urlretrieve" />
           <option value="typing.KeysView.*" />
+          <option value="et.ParserXml.*" />
         </list>
       </option>
     </inspection_tool>
