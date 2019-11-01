@@ -13,6 +13,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="urllib.urlretrieve" />
+          <option value="typing.KeysView.*" />
         </list>
       </option>
     </inspection_tool>
