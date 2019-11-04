@@ -4,7 +4,7 @@ import os
 import string
 import random
 
-def change_image_size(image_file_path):
+def change_image_size(image_file_path,width,depth):
     """
     :param image_file_path: 存放需要处理图片文件夹
     :return:
@@ -19,9 +19,7 @@ def change_image_size(image_file_path):
                 path = os.path.join(image_file_path, file)
                 if not os.path.isdir(path):
                     img = Image.open(path)
-                    iphone5_width = 1136
-                    iphone5_depth = 640
-                    change_size_out((iphone5_width, iphone5_depth), img)
+                    change_size_out((width, depth), img)
             except Exception  as OSError:
                 print("出现如下异常%s" % OSError)
 
@@ -56,4 +54,4 @@ def change_size_out(depth_width, img):
 # iphone5_width=1136
 # iphone5_depth=640
 if __name__ == '__main__':
-    change_image_size("D:\\work\\图片")
+    change_image_size("D:\\work\\图片",1136,640)
