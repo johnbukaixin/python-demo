@@ -47,3 +47,14 @@ student = np.dtype([('name','S20'), ('age', 'i1'), ('marks', 'f4')])
 a = np.array([('abc', 21, 50),('xyz', 18, 75)], dtype = student)
 print(a)
 
+
+a = np.arange(6).reshape(2,3)
+# 保存数据
+np.savetxt('a.csv',a,fmt='%d',delimiter=',')
+np.savetxt('1f.csv',a,fmt='%.1f',delimiter=',')
+
+b = np.loadtxt('a.csv',delimiter=',')
+print(b)
+c = np.loadtxt('a.csv',dtype=np.int,delimiter=',')
+print(c)
+
