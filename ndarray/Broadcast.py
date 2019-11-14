@@ -22,3 +22,11 @@ print(d + f)
 # 对两个数组，分别比较他们的每一个维度（若其中一个数组没有当前维度则忽略），满足：
 # 数组拥有相同形状。
 # 当前维度的值相等&&当前维度的值有一个是 1。
+
+dt = np.dtype[('name','S10'),('age',int)]
+
+b = np.array([("raju",21),("anil",25),("ravi",  17),  ("amar",27)], dtype = dt)
+
+np.sort(b,order='name')
+
+randinp.random.nt
