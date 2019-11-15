@@ -97,10 +97,5 @@ print(b)
 # 如何用0来填充一个数组的边界？
 print(np.pad(b, pad_width=1, mode='constant', constant_values=0))
 
-c = np.nan * 0
-print(c)
-print(np.nan == np.nan)
-print(np.inf > np.nan)
-print(np.nan - np.nan)
-print(0.3 == 3 * 0.1)
+
 
