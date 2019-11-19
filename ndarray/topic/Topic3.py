@@ -26,3 +26,4 @@ if __name__ == '__main__':
     b = np.array([6, 3, 4, 8, 9, 7, 1])
     print(pair_max(a, b))
 
+

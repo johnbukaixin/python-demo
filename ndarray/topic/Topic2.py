@@ -75,3 +75,14 @@ index = np.where(np.logical_and(a >= 5, a <= 10))
 print(a[index])
 
 print(type(a))
+
+a = np.arange(1, 4)
+
+b = np.arange(1, 10).reshape(3, 3)
+
+np.diag(a)
+
+np.diag(b)
+
+np.diag(np.diag(b))
+
